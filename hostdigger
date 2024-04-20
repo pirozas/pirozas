@@ -1,0 +1,11 @@
+#!/usr/bin/python
+import subprocess
+
+def run_hdig():
+    try:
+        subprocess.run(['python', 'hdig.py'], check=True)
+    except subprocess.CalledProcessError as e:
+        print(f"Error running hdig.py: {e}")
+
+if __name__ == "__main__":
+    run_hdig()
